@@ -15,7 +15,7 @@ dependencies {
 
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0' // Укажите последнюю версию Jackson
 
-    compile 'io.rest-assured:rest-assured:5.3.0' // Укажите последнюю версию RestAssured
+    implementation 'io.rest-assured:rest-assured:5.3.0' // Укажите последнюю версию RestAssured
     testImplementation 'com.google.code.gson:gson:2.10.1' // Укажите последнюю версию Gson
 
     compileOnly 'org.projectlombok:lombok:1.18.26'
