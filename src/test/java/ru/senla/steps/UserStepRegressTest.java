@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.testng.Assert;
 import ru.senla.user.User;
@@ -13,11 +14,13 @@ import ru.senla.user.UserApi;
 public class UserStepRegressTest {
     private UserApi userApi = new UserApi();
 
+    @Step
     @When("Инициализавция запроса для регрессионного тестирования")
     public ValidatableResponse getUserRegress() {
         return userApi.getUser().then();
     }
 
+    @Step
     @Then("Успешно получаем код запрос и JSON для регрессионного тестирования")
     public void getUserRegressTest() {
         ValidatableResponse response = getUserRegress();

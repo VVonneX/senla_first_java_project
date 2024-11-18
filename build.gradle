@@ -29,7 +29,7 @@ dependencies {
 
     testImplementation 'io.cucumber:cucumber-java:7.10.1'
     testImplementation 'io.cucumber:cucumber-testng:7.10.1'
-    testImplementation 'io.qameta.allure:allure-cucumber5-jvm:2.10.0'
+    testImplementation 'io.qameta.allure:allure-cucumber5-jvm:2.13.9'
 }
 
 test {
