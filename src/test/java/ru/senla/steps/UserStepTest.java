@@ -7,11 +7,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import io.restassured.response.ValidatableResponse;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import ru.senla.user.User;
 import ru.senla.user.UserApi;
 
 
-public class UserStepTest {
+public class UserStepTest{
     private UserApi userApi = new UserApi();
 
     @When("Инициализавция запроса")
@@ -19,6 +20,7 @@ public class UserStepTest {
         return userApi.getUser().then();
     }
 
+    @Test
     @Then("Успешно получаем код запрос и JSON")
     public void getUserSmokeTest() {
         ValidatableResponse response = getUserSmoke();

@@ -3,8 +3,11 @@ package ru.senla.steps;
 import com.google.gson.Gson;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 import io.restassured.response.ValidatableResponse;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import ru.senla.user.User;
 import ru.senla.user.UserApi;
 
@@ -17,6 +20,7 @@ public class UserStepRegressTest {
         return userApi.getUser().then();
     }
 
+    @Test
     @Then("Успешно получаем код запрос и JSON для регрессионного тестирования")
     public void getUserRegressTest() {
         ValidatableResponse response = getUserRegress();
