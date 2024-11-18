@@ -10,13 +10,8 @@ import org.testng.Assert;
 import ru.senla.user.User;
 import ru.senla.user.UserApi;
 
-@CucumberOptions(
-        features = "src/test/resources/scenarios",
-        glue = "ru.senla.user",
-        tags = "@smoke",
-        snippets = CucumberOptions.SnippetType.UNDERSCORE
-)
-public class UserStepTest extends AbstractTestNGCucumberTests{
+
+public class UserStepTest {
     private UserApi userApi = new UserApi();
 
     @When("Инициализавция запроса")
