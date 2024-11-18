@@ -10,13 +10,7 @@ import org.testng.Assert;
 import ru.senla.user.User;
 import ru.senla.user.UserApi;
 
-@CucumberOptions(
-        features = "src/test/resources/scenarios",
-        glue = "ru.senla.user", // Убедитесь, что это соответствует пакету ваших определений шагов
-        tags = "@regress",
-        snippets = CucumberOptions.SnippetType.UNDERSCORE
-)
-public class UserStepRegressTest  extends AbstractTestNGCucumberTests {
+public class UserStepRegressTest {
     private UserApi userApi = new UserApi();
 
     @When("Инициализавция запроса для регрессионного тестирования")
