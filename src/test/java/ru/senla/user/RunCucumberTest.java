@@ -11,10 +11,4 @@ import io.cucumber.testng.CucumberOptions;
         snippets = CucumberOptions.SnippetType.UNDERSCORE
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
-
-    @Override
-    public Object[][] scenarios() {
-        Object[][] scenarios = super.scenarios();
-        return scenarios;
-    }
 }
