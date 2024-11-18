@@ -6,6 +6,12 @@ plugins {
 group 'ru.senla'
 version '1.0-SNAPSHOT'
 
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 repositories {
     mavenCentral()
 }
@@ -14,16 +20,19 @@ dependencies {
     testImplementation 'org.testng:testng:7.7.0' // Укажите последнюю версию TestNG
 
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0' // Укажите последнюю версию Jackson
-    testImplementation 'io.qameta.allure:allure-testng:2.17.0'
 
     implementation 'io.rest-assured:rest-assured:5.3.0' // Укажите последнюю версию RestAssured
     testImplementation 'com.google.code.gson:gson:2.10.1' // Укажите последнюю версию Gson
 
     compileOnly 'org.projectlombok:lombok:1.18.26'
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    testImplementation 'io.cucumber:cucumber-java:7.10.1'
+    testImplementation 'io.cucumber:cucumber-testng:7.10.1'
 }
 
 test {
     useTestNG()
+    systemProperty("cucmber.filter.tags", System.getenv("Tags"))
 }
 
