@@ -11,18 +11,19 @@ import org.testng.annotations.Test;
 import ru.senla.user.User;
 import ru.senla.user.UserApi;
 
-
 public class UserStepTest{
     private UserApi userApi = new UserApi();
 
     @When("Инициализавция запроса")
-    public ValidatableResponse getUserSmoke() {
+    @When("Инициализавция запроса для регрессионного тестирования")
+    public ValidatableResponse getUser() {
         return userApi.getUser().then();
     }
 
     @Then("Успешно получаем код запрос и JSON")
-    public void getUserSmokeTest() {
-        ValidatableResponse response = getUserSmoke();
+    @Then("Успешно получаем код запрос и JSON для регрессионного тестирования")
+    public void getUserTest() {
+        ValidatableResponse response = getUser();
         response.assertThat().statusCode(200);
         String userJson = response.extract().body().asString();
         Gson gson = new Gson();

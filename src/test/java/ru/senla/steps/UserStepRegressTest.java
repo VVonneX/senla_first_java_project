@@ -1,3 +1,4 @@
+/*
 package ru.senla.steps;
 
 import com.google.gson.Gson;
@@ -13,7 +14,6 @@ import ru.senla.user.UserApi;
 
 public class UserStepRegressTest {
     private UserApi userApi = new UserApi();
-
 
     @When("Инициализавция запроса для регрессионного тестирования")
     public ValidatableResponse getUserRegress() {
@@ -32,3 +32,4 @@ public class UserStepRegressTest {
     }
 
 }
+*/
