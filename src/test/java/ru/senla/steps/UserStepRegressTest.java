@@ -20,7 +20,6 @@ public class UserStepRegressTest {
         return userApi.getUser().then();
     }
 
-    @Test
     @Then("Успешно получаем код запрос и JSON для регрессионного тестирования")
     public void getUserRegressTest() {
         ValidatableResponse response = getUserRegress();

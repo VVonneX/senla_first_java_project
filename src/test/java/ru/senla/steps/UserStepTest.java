@@ -20,7 +20,6 @@ public class UserStepTest{
         return userApi.getUser().then();
     }
 
-    @Test
     @Then("Успешно получаем код запрос и JSON")
     public void getUserSmokeTest() {
         ValidatableResponse response = getUserSmoke();
