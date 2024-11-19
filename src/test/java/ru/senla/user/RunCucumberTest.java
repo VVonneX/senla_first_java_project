@@ -6,8 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/scenarios",
-        plugin = {"json:target/reports/cucumber.json",
-                  "html:target/reports/cucumber.html"},
+        plugin = {"json:build/cucumber.json"},
         glue = "ru.senla.user",
         tags = "@smoke",
         snippets = CucumberOptions.SnippetType.UNDERSCORE
